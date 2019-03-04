@@ -15,6 +15,7 @@ class ProductController extends Controller
     public function index()
     {
         //
+       return  ProductCollection::Collection(Product::all());
     }
 
     /**
@@ -47,6 +48,8 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
+       
+        return new ProductResource ($product);
     }
 
     /**
