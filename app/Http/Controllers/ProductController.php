@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Product;
 use Illuminate\Http\Request;
 
+
 class ProductController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         //
-       return  ProductCollection::Collection(Product::all());
+       return  ProductCollection::Collection(Product::paginate(5));
     }
 
     /**

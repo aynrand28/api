@@ -8,6 +8,6 @@ class Product extends Model
 {
     //
     public function product(){
-            return $this->belongTo(product::class);
+            return $this->hasMany(Review::class);
     }
 }
